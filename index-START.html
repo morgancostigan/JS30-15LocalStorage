@@ -38,10 +38,21 @@
       done: false
     };
     items.push(item);
+    populateList(items, itemsList)
     console.log(items);
-    
     this.reset(); //resets form
   }//end addItem function
+
+  function populateList(plates = [], platesList) {
+    platesList.innerHTML = plates.map((plate, i) => {
+      return `
+        <li>
+          <label for="">${plate.text}</label>
+        </li>
+
+      `;//end return
+    }).join('');//.join('') converts .map  array to single  string
+  }//end populateList function
 
   addItems.addEventListener('submit', addItem);
 
