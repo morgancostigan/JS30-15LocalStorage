@@ -33,12 +33,11 @@
   function addItem(e) {
     e.preventDefault(); //prevents page from refreshing after form submission 
     const text = (this.querySelector('[name=item]')).value;
-    console.log(text);
-    
     const item = {
-      name: 'Item Name',
+      text,  //this is ES6, otherwise you would use>> text: text
       done: false
     }
+    console.log(item);
     
   }//end addItem function
 
