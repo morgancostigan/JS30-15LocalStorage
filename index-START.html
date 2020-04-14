@@ -39,7 +39,7 @@
     };
     items.push(item);
     populateList(items, itemsList)
-    console.log(items);
+    localStorage.setItem('items',  JSON.stringify(items)); //sends stringified items to local storage
     this.reset(); //resets form
   }//end addItem function
 
