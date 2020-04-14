@@ -28,7 +28,7 @@
 <script>
   const addItems = document.querySelector('.add-items');
   const itemsList = document.querySelector('.plates');
-  const items = [];
+  const items = JSON.parse(localStorage.getItem('items')) || [];//use preexisting list from local storage if available or empty array
 
   function addItem(e) {
     e.preventDefault(); //prevents page from refreshing after form submission 
@@ -56,6 +56,8 @@
   }//end populateList function  // refreshes entire list, for situations with lots of refreshes or lots of data, better to use something like react
 
   addItems.addEventListener('submit', addItem);
+
+  populateList(items, itemsList); //populate list on page load
 
 </script>
 
