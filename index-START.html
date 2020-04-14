@@ -36,8 +36,10 @@
     const item = {
       text,  //this is ES6, otherwise you would use>> text: text
       done: false
-    }
-    console.log(item);
+    };
+    items.push(item);
+    console.log(items);
+    
     this.reset(); //resets form
   }//end addItem function
 
