@@ -56,6 +56,7 @@
   }//end populateList function  // refreshes entire list, for situations with lots of refreshes or lots of data, better to use something like react
 
   function toggleDone(e) {
+    if(!e.target.matches('input')) return; //skip this unless an input is clicked
     console.log(e);
     
   }//end toggleDone function 
