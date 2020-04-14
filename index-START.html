@@ -31,8 +31,14 @@
   const items = [];
 
   function addItem(e) {
-    e.preventDefault(); //prevents page from refreshing 
-    console.log('kia ora');
+    e.preventDefault(); //prevents page from refreshing after form submission 
+    const text = (this.querySelector('[name=item]')).value;
+    console.log(text);
+    
+    const item = {
+      name: 'Item Name',
+      done: false
+    }
     
   }//end addItem function
 
