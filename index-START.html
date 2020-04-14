@@ -55,7 +55,13 @@
     }).join('');//.join('') converts .map  array to single  string
   }//end populateList function  // refreshes entire list, for situations with lots of refreshes or lots of data, better to use something like react
 
+  function toggleDone(e) {
+    console.log(e);
+    
+  }//end toggleDone function 
+
   addItems.addEventListener('submit', addItem);
+  itemsList.addEventListener('click', toggleDone);
 
   populateList(items, itemsList); //populate list on page load
 
