@@ -47,12 +47,13 @@
     platesList.innerHTML = plates.map((plate, i) => {
       return `
         <li>
-          <label for="">${plate.text}</label>
+          <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ' '}/>
+          <label for="item${i}">${plate.text}</label>
         </li>
 
       `;//end return
     }).join('');//.join('') converts .map  array to single  string
-  }//end populateList function
+  }//end populateList function  // refreshes entire list, for situations with lots of refreshes or lots of data, better to use something like react
 
   addItems.addEventListener('submit', addItem);
 
